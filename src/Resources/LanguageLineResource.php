@@ -97,7 +97,7 @@ class LanguageLineResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->columns([])
+            ->columns(static::getColumns())
             ->filters([NotTranslatedFilter::make()])
             ->actions([
                 EditAction::make(),
